@@ -112,7 +112,7 @@ if (birthYear <= 2000) {
 console.log(century);*/
 
 // type conversion 
-const inputYear = '1991';
+/*const inputYear = '1991';
 console.log(Number(inputYear),inputYear);
 console.log(inputYear + 18);
 
@@ -121,17 +121,58 @@ console.log('I am ' + 23 + ' years old');
 console.log('I am ' + '23' + ' years old');
 console.log('23' - '10' - 3);
 console.log('23' * '10' - 3);
-console.log('23' > '18');
+console.log('23' > '18');*/
 
+// falsy and truthy
+/*if(2 == 2) {console.log(true);}
 
+let height = "5 feet"
 
+if(height) {
+    console.log('Yay height is defined');
+} else {
+    console.log("Height is Undefined");
+}*/
 
+/*const age = 18;
+if(age === 18) console.log('You just became an adult (strict)');
 
+if(age == 18) console.log('You just became an adult (loose)');
 
+const favorite = Number(prompt("What's your favorite number?"));
+console.log(favorite);
 
+if(favorite === 23) {
+    console.log("Cool! 23 is an amazing number");
+} else if (favorite === 7) {
+    console.log('7 is also a cool number');
+} else {
+    console.log('Number is not 23 or 7');
+}*/
 
+const hasDriversLicense = true; // A
+const hasGoodVision = true; // B
 
+console.log(hasDriversLicense && hasGoodVision);
+console.log(hasDriversLicense || hasGoodVision);
+console.log(!hasDriversLicense);
 
+const shouldDrive = hasDriversLicense && hasGoodVision;
+
+// if(hasDriversLicense && hasGoodVision) {
+//     console.log("Sarah is able to drive");
+// } else {
+//     console.log('Someone else should drive..');
+// }
+
+const isTired = false; // C
+console.log(hasDriversLicense || hasGoodVision || isTired);
+
+if(hasDriversLicense && hasGoodVision && !isTired) {
+    console.log("Sarah is able to drive");
+} else {
+    console.log('Someone else should drive..');
+}
 
 
 

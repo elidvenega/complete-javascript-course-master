@@ -16,3 +16,16 @@ if(marksBmi > johnsBmi) {
 } else {
     console.log(false);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
