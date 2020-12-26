@@ -41,7 +41,11 @@ const language = "English"
 // Sarah new home
 const sarahCountryPopulation = Number('50 million');
 const sarahLanguage = "English"
-if(population &&)
+if(population && sarahCountryPopulation || language && sarahLanguage) {
+    console.log("You should live in portugal");
+} else {
+    console.log("Portugal does not meet your criteria");
+}
 
 
 
