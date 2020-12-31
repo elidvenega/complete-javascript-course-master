@@ -1,7 +1,7 @@
-const country = "U.S.A";
-const continent = "North America";
-const population = Number("328.2 million");
-const language = "English"
+// const country = "U.S.A";
+// const continent = "North America";
+// const population = Number("328.2 million");
+// const language = "English"
 // console.log(country);
 // console.log(continent);
 // console.log(population);
@@ -39,63 +39,33 @@ const language = "English"
 // }
 
 // Sarah new home
-const sarahCountryPopulation = Number('50 million');
-const sarahLanguage = "English"
-if(population && sarahCountryPopulation || language && sarahLanguage) {
-    console.log("You should live in portugal");
-} else {
-    console.log("Portugal does not meet your criteria");
+// const sarahCountryPopulation = Number('50 million');
+// const sarahLanguage = "English"
+// if(population && sarahCountryPopulation || language && sarahLanguage) {
+//     console.log("You should live in portugal");
+// } else {
+//     console.log("Portugal does not meet your criteria");
+// }
+
+const language = 'chinese';
+
+switch (language) {
+    case 'chinese':
+        console.log('most use language');
+        break;
+    case 'spanish':
+        console.log('spanish');
+        break;
+    case 'english':
+        console.log('english');
+        break;
+    case 'hindi':
+        console.log('hindi');
+        break;
+    case 'arabic':
+        console.log('arabic');
+        break;
+
+    default:
+        console.log("default");
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -150,14 +150,14 @@ if(favorite === 23) {
     console.log('Number is not 23 or 7');
 }*/
 
-const hasDriversLicense = true; // A
-const hasGoodVision = true; // B
+// const hasDriversLicense = true; // A
+// const hasGoodVision = true; // B
 
-console.log(hasDriversLicense && hasGoodVision);
-console.log(hasDriversLicense || hasGoodVision);
-console.log(!hasDriversLicense);
+// console.log(hasDriversLicense && hasGoodVision);
+// console.log(hasDriversLicense || hasGoodVision);
+// console.log(!hasDriversLicense);
 
-const shouldDrive = hasDriversLicense && hasGoodVision;
+// const shouldDrive = hasDriversLicense && hasGoodVision;
 
 // if(hasDriversLicense && hasGoodVision) {
 //     console.log("Sarah is able to drive");
@@ -165,14 +165,92 @@ const shouldDrive = hasDriversLicense && hasGoodVision;
 //     console.log('Someone else should drive..');
 // }
 
-const isTired = false; // C
-console.log(hasDriversLicense || hasGoodVision || isTired);
+// const isTired = false; // C
+// console.log(hasDriversLicense || hasGoodVision || isTired);
 
-if(hasDriversLicense && hasGoodVision && !isTired) {
-    console.log("Sarah is able to drive");
-} else {
-    console.log('Someone else should drive..');
+// if(hasDriversLicense && hasGoodVision && !isTired) {
+//     console.log("Sarah is able to drive");
+// } else {
+//     console.log('Someone else should drive..');
+// }
+
+// Switch Statement
+
+/*const day = 'monday';
+
+switch (day) {
+    case 'monday': // day === 'monday'
+        console.log('Plan course structure');
+        console.log('Go to coding meetup');
+        break;
+    case 'tuesday':
+        console.log('Prepare theory videos');
+        break;
+    case 'wednesday':
+        console.log('Another Day');
+        break;
+    case 'thursday':
+        break;
+    case 'friday':
+        console.log('Record videos');
+        break;
+    case 'saturday':
+        break;
+    case 'sunday':
+        console.log('Enjoy the weekend :D');
+        break;
+    default:
+        console.log("Not a valid day!");
 }
+
+// if statement
+const day1 = 'wednesday';
+
+if (day1 === 'monday') {
+    console.log('Plan course structure');
+} else if (day1 === 'tuesday') {
+    console.log('Prepare theory videos');
+} else if (day1 === 'wednesday') {
+    console.log('Another Day');
+} else if (day1 === 'thursday') {
+    console.log('thursday');
+} else if (day1 === 'friday') {
+    console.log('Record videos');
+} else if (day1 == 'saturday') {
+    console.log('saturday');
+} else if (day1 === 'sunday') {
+    console.log('Enjoy the weekend :D');
+} else {
+    console.log("Not a valid day!");
+}*/
+
+// Statement and Expressions
+// 3 + 4
+// 1991
+
+// if(23 > 10) {
+//     const str = '23 is bigger';
+// }
+
+const age = 23;
+
+console.log(age > 21  ? "Mindy is old enough": "not old enough");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
