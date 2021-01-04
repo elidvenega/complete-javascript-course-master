@@ -36,7 +36,7 @@ console.log(percentageOfWorld3(1200));*/
 
 
 function percentageOfWorld1(population) {
-    const percent = population / 7900 * 100;
+    const percent = (population / 7900 ) * 100;
     return percent;
 }
 const describePopulation = function (country, population) {
@@ -47,3 +47,26 @@ const describePopulation = function (country, population) {
 };
 describePopulation('Portugal', 10);
 describePopulation('China', 1441);
+
+// Arrays
+const population = [200,30,21,50];
+console.log(population.length === 4);
+
+const percent = [
+    percentageOfWorld1(population[0]),
+    percentageOfWorld1(population[1]),
+    percentageOfWorld1(population[2]),
+    percentageOfWorld1(population[3])];
+console.log(percent);
+
+
+
+
+
+
+
+
+
+
+
+``
