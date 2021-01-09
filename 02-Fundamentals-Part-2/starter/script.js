@@ -80,7 +80,7 @@ const fruitProcessor = function (apples, oranges) {
 
 console.log(fruitProcessor(2, 3));*/
 
-const calcAge = function (birthYear) {
+/*const calcAge = function (birthYear) {
     return 2037 - birthYear;
 }
 
@@ -100,10 +100,10 @@ const yearsUntilRetirement = function (birthYear, firstName) {
 
 console.log(yearsUntilRetirement(1991, 'Jonas'));
 console.log(yearsUntilRetirement(1950, 'Mike'));
-console.log(yearsUntilRetirement(1965, 'Jonas'));
+console.log(yearsUntilRetirement(1965, 'Jonas'));*/
 
 // Arrays
-const friends = ['Michael', 'Steven', 'Peter'];
+/*const friends = ['Michael', 'Steven', 'Peter'];
 console.log(friends);
 
 const y = new Array(1991, 1984, 2008, 2020);
@@ -133,9 +133,23 @@ const age3 = calcAge(years[2]);
 const age4 = calcAge(years[3]);
 console.log(age1,age2,age3,age4);
 
-const ages = []
+const ages = []*/
 
+// Array Methods
+const friends = ['Michael', 'Steven', 'Peter'];
+friends.unshift('Elid');
+console.log(friends);
+friends.shift();
+console.log(friends);
+console.log(friends.indexOf('Steven'));
 
+// ES6 method includes
+console.log(friends.includes('Steven'));
+console.log(friends.includes('Bob'));
+
+if (friends.includes('Steven')) {
+    console.log('You have a friends called Steven');
+}
 
 
 

@@ -28,3 +28,15 @@ scoreDolphins = calcAverage(85, 54, 41);
 scoreKoalas = calcAverage(23, 34, 27);
 console.log(scoreDolphins, scoreKoalas);
 checkWinner(scoreDolphins, scoreKoalas);
+
+// Coding Challenge 2
+const calcTip = function (bill) {
+    return bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.2;
+}
+
+const bills = [125, 555, 44];
+
+const tips = [calcTip(bills[0]) + bills[0], calcTip(bills[1]) + bills[1], calcTip(bills[2]) + bills[2]];
+
+console.log(tips[0], tips[1], tips[2]);
+
