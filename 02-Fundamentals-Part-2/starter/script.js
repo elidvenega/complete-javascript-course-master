@@ -136,7 +136,7 @@ console.log(age1,age2,age3,age4);
 const ages = []*/
 
 // Array Methods
-const friends = ['Michael', 'Steven', 'Peter'];
+/*const friends = ['Michael', 'Steven', 'Peter'];
 friends.unshift('Elid');
 console.log(friends);
 friends.shift();
@@ -149,7 +149,18 @@ console.log(friends.includes('Bob'));
 
 if (friends.includes('Steven')) {
     console.log('You have a friends called Steven');
-}
+}*/
+
+// Objects
+// key value pairs
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'Schmedtman',
+    age: 2037 - 1991,
+    job: 'teacher',
+    friends: ['Michael','Peter', 'Steven']
+};
+
 
 
 
