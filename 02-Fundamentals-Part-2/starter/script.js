@@ -153,13 +153,85 @@ if (friends.includes('Steven')) {
 
 // Objects
 // key value pairs
-const jonas = {
+// const jonas = {
+//     firstName: 'Jonas',
+//     lastName: 'Schmedtman',
+//     age: 2037 - 1991,
+//     job: 'teacher',
+//     friends: ['Michael','Peter', 'Steven']
+// };
+
+// Dot vs Bracket notation
+/*const jonas = {
     firstName: 'Jonas',
-    lastName: 'Schmedtman',
+    lastName: 'Schmedtmann',
     age: 2037 - 1991,
     job: 'teacher',
     friends: ['Michael','Peter', 'Steven']
+}
+
+console.log(jonas);
+
+console.log(jonas.lastName);
+console.log(jonas['lastName']);
+
+const nameKey = 'Name';
+console.log(jonas['first' + nameKey]);
+console.log(jonas['last' + nameKey]);
+
+console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his
+best friend is ${jonas.friends[0]}`);*/
+
+// object methods
+
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'Schmedtmann',
+    birthYear: 1991,
+    job: 'teacher',
+    friends: ['Michael','Peter', 'Steven'],
+    hasDriversLicense: true,
+
+    // calcAge: function(birthYear) {
+    //     return 2037 - birthYear;
+    // }
+
+    // calcAge: function() {
+    //     return 2037 - this.birthYear;
+    // }
+
+    calcAge: function() {
+        this.age = 2037 - this.birthYear;
+        return this.age;
+    },
+
+    getSummary: function() {
+        return `${this.firstName} is a ${this.calcAge()}
+        year old ${jonas.job}, and he has ${this.hasDriversLicense
+        ? 'a': 'no'} drivers license.`
+    }
 };
+
+console.log(jonas.calcAge());
+console.log(jonas['calcAge'](1991));
+console.log(jonas.age);
+
+console.log(jonas.getSummary());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
