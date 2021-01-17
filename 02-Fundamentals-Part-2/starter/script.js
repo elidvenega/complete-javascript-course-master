@@ -184,13 +184,13 @@ best friend is ${jonas.friends[0]}`);*/
 
 // object methods
 
-const jonas = {
+/*const jonas = {
     firstName: 'Jonas',
     lastName: 'Schmedtmann',
     birthYear: 1991,
     job: 'teacher',
     friends: ['Michael','Peter', 'Steven'],
-    hasDriversLicense: true,
+    hasDriversLicense: true,*/
 
     // calcAge: function(birthYear) {
     //     return 2037 - birthYear;
@@ -200,7 +200,7 @@ const jonas = {
     //     return 2037 - this.birthYear;
     // }
 
-    calcAge: function() {
+   /* calcAge: function() {
         this.age = 2037 - this.birthYear;
         return this.age;
     },
@@ -216,7 +216,15 @@ console.log(jonas.calcAge());
 console.log(jonas['calcAge'](1991));
 console.log(jonas.age);
 
-console.log(jonas.getSummary());
+console.log(jonas.getSummary());*/
+
+// Looping through arrays 
+const jonas = ['Jonas','Schmedtmann', 2037 - 1991 , 'teacher',
+['Michael','Peter','Steven']];
+
+for(let i=0; i < jonas.length; i++) {
+    console.log(jonas[i]);
+}
 
 
 
