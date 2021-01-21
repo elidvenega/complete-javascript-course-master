@@ -192,15 +192,15 @@ best friend is ${jonas.friends[0]}`);*/
     friends: ['Michael','Peter', 'Steven'],
     hasDriversLicense: true,*/
 
-    // calcAge: function(birthYear) {
-    //     return 2037 - birthYear;
-    // }
+// calcAge: function(birthYear) {
+//     return 2037 - birthYear;
+// }
 
-    // calcAge: function() {
-    //     return 2037 - this.birthYear;
-    // }
+// calcAge: function() {
+//     return 2037 - this.birthYear;
+// }
 
-   /* calcAge: function() {
+/* calcAge: function() {
         this.age = 2037 - this.birthYear;
         return this.age;
     },
@@ -219,7 +219,7 @@ console.log(jonas.age);
 console.log(jonas.getSummary());*/
 
 // Looping through arrays 
-const jonas = ['Jonas','Schmedtmann', 2037 - 1991 , 'teacher',
+/*const jonas = ['Jonas','Schmedtmann', 2037 - 1991 , 'teacher',
 ['Michael','Peter','Steven']];
 
 const types = [];
@@ -230,7 +230,7 @@ for(let i=0; i < jonas.length; i++) {
     
     // Filling types array
     // types[i] = typeof jonas[i]
-    types[i] = typeof jonas[i];
+      types[i] = typeof jonas[i];
 }
 
 console.log(types);
@@ -270,24 +270,41 @@ for(let i=0; i < jonas.length; i++) {
 
     console.log(jonas[i], typeof jonas[i]);
     
+}*/
+
+// loop over arrays backwards
+/*const jonas = ['Jonas','Schmedtmann', 2037 - 1991 , 'teacher',
+['Michael','Peter','Steven'],true];
+
+for(let i = jonas.length - 1; i >= 0; i--) {
+    console.log(i, jonas[i]);
 }
 
+for (let exercise = 1; exercise < 5; exercise++) {
+    console.log(`---- Starting exercise ${exercise}`);
+    for(let rep =1; rep < 4; rep++) {
+            console.log(`Exercise ${exercise}:Lifting weight repetition ${rep}`);
+    }
+}*/
 
+// for (let rep=1; rep <= 10; rep++) {
+//     console.log(`Lifting weights repetition ${rep} 💪`);
+// }
 
+// let rep = 1;
+// while (rep <= 10) {
+//     console.log(`Lifting weights repetition ${rep} 💪`);
+//     rep++;
+// }
 
+let dice = Math.trunc(Math.random() * 6) + 1;
+console.log(dice);
 
-
-
-
-
-
-
-
-
-
-
-
-
+while(dice !== 6) {
+    console.log(`You rolled a ${dice}`);
+    dice = Math.trunc(Math.random() * 6) + 1;
+    if (dice === 6) console.log('Loop is about to end ...');
+}
 
 
 
