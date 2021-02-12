@@ -53,6 +53,17 @@ document.querySelector('.check').addEventListener('click', function () {
 
 // Challenge reset guess button and background
 document.querySelector('.again').addEventListener('click', function(){
+    const guess = Number(document.querySelector('.guess').value);
+    
+    //  When there is no input
+    if (!guess) {
+        document.querySelector('.message').textContent = 'No Number';
+    // When player wins
+    } else if (guess === secretNumber) {
+        document.querySelector('.number').textContent = '?';
+        document.querySelector('.guess').textContent = '';
+    }
+
     document.querySelector('body').style.backgroundColor = "#222";
 })
 
