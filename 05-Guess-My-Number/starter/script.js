@@ -12,7 +12,7 @@ document.querySelector('.guess').value = 23;*/
 
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
-let highscore = 0;
+let highScore = 0;
 
 const displayMessage = function(message) {
     document.querySelector('.message').textContent = message;
@@ -31,13 +31,13 @@ document.querySelector('.check').addEventListener('click', function () {
         // document.querySelector('.message').textContent = 'Correct Number🎉';
         displayMessage('Correct Number🎉');
         document.querySelector('.number').textContent = secretNumber;
-        document.querySelector('body').style.backgroundColor = "#60b347";
+        document.querySelector('body').style.backgroundColor = "#0984e3";
 
         document.querySelector('.number').style.width = "30rem";
 
-        if (score > highscore) {
-            highscore = score;
-            document.querySelector('.highscore').textContent = highscore;
+        if (score > highScore) {
+            highScore = score;
+            document.querySelector('.highScore').textContent = highScore;
         }
 
         // When guess is wrong
@@ -87,6 +87,6 @@ document.querySelector('.again').addEventListener('click', function () {
     document.querySelector('.number').textContent = '?';
     document.querySelector('.guess').value = '';
 
-    document.querySelector('body').style.backgroundColor = "#222";
+    document.querySelector('body').style.backgroundColor = "#0984e3";
     document.querySelector('.number').style.width = "15rem";
 })
