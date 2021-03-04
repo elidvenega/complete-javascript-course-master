@@ -14,7 +14,7 @@ let secretNumber = Math.trunc(Math.random() * 50) + 1;
 let score = 20;
 let highScore = 0;
 
-const displayMessage =  (message) => document.querySelector('.message').textContent = message;
+const displayMessage = (message) => document.querySelector('.message').textContent = message;
 
 
 document.querySelector('.check').addEventListener('click', e => {
@@ -31,7 +31,8 @@ document.querySelector('.check').addEventListener('click', e => {
         displayMessage('Correct Number🎉');
         document.querySelector('.number').textContent = secretNumber;
         document.querySelector('body').style.backgroundColor = "#0984e3";
-
+        document.querySelector('.btn').style.backgroundColor = "#20bf6b";
+        document.querySelector('.check').style.backgroundColor = "#20bf6b";
         document.querySelector('.number').style.width = "30rem";
 
         if (score > highScore) {
@@ -77,8 +78,8 @@ document.querySelector('.check').addEventListener('click', e => {
 
 // Challenge reset guess button and background
 document.querySelector('.again').addEventListener('click', e => {
-    score = 100;
-    secretNumber = Math.trunc(Math.random() * 100) + 1;
+    score = 20;
+    secretNumber = Math.trunc(Math.random() * 50) + 1;
 
     //document.querySelector('.message').textContent = 'Start guessing...';
     displayMessage('Start guessing...');
