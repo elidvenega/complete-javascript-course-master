@@ -110,16 +110,16 @@ h1 {
 
 .btn {
   border: none;
-  background-color: #fff;
-  color: #222;
+  background-color: #0984e3;
+  color: #fff;
   font-size: 2rem;
   font-family: inherit;
-  padding: 2rem 3rem;
+  padding: 1.3rem 2.3rem;
   cursor: pointer;
 }
 
 .btn:hover {
-  background-color: #ccc;
+  background-color: #2980b9;
 }
 
 .message {
