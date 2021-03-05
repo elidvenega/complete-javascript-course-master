@@ -87,6 +87,8 @@ document.querySelector('.again').addEventListener('click', e => {
     document.querySelector('.number').textContent = '?';
     document.querySelector('.guess').value = '';
 
-    document.querySelector('body').style.backgroundColor = "#0984e3";
+    document.querySelector('body').style.backgroundColor = "#20bf6b";
     document.querySelector('.number').style.width = "15rem";
+    document.querySelector('.btn').style.backgroundColor = "#0984e3";
+    document.querySelector('.check').style.backgroundColor = "#0984e3";
 })
