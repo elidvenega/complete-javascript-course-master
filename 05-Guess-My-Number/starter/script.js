@@ -16,8 +16,6 @@ let highScore = 0;
 const displayMessage = (message) => document.querySelector('.message').textContent = message;
 
 const game = function () {
-
-
     document.querySelector('.check').addEventListener('click', e => {
         const guess = Number(document.querySelector('.guess').value);
         // console.log(guess, typeof guess);
