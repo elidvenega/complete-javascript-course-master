@@ -1,3 +1,16 @@
+// Coding Challenge #1
+
+// 1. Use array and insert it into function with given temperature
+// 2. 
+
+const data1 = [17, 21, 23];
+const data2 = [12, 5, -5, 0, 4];
+
+const printForecast = function () {
+
+}
+
+
 // coding challenge 2
 /*
 const calcAverage = (a, b, c) => (a + b + c) / 3;
