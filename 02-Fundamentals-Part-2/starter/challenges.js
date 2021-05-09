@@ -3,13 +3,20 @@
 // 1. Use array and insert it into function with given temperature
 // 2. 
 
-const data1 = [17, 21, 23];
-const data2 = [12, 5, -5, 0, 4];
-
-const printForecast = function () {
-
+const printForecast = function (arr) {
+    return `$the temperature is ${arr}`;
 }
 
+const data1 = [17, 21, 23];
+const temp = [];
+const data2 = [12, 5, -5, 0, 4];
+
+for (let b = 0; b < data1.length; b++) {
+    const test = printForecast(data1[b]);
+    temp.push(test + data1[b]);
+}
+
+console.log(temp);
 
 // coding challenge 2
 /*
