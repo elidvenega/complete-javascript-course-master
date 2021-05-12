@@ -1,22 +1,41 @@
 // Coding Challenge #1
 
 // 1. Use array and insert it into function with given temperature
-// 2. 
 
-const printForecast = function (arr) {
-    return `$the temperature is ${arr}`;
-}
+
+// const printForecast = function (arr) {
+//     return `...the temperature is ${arr}`;
+// }
+
+// const data1 = [17, 21, 23];
+// const data2 = [12, 5, -5, 0, 4];
+// const temperature = [];
+
+// for (let temp = 0; temp < data1.length; temp++) {
+//     const test = printForecast(data1[temp]);
+//     temperature.push(test + data1[temp]);
+// }
+
+// console.log(temperature);
 
 const data1 = [17, 21, 23];
-const temp = [];
 const data2 = [12, 5, -5, 0, 4];
 
-for (let b = 0; b < data1.length; b++) {
-    const test = printForecast(data1[b]);
-    temp.push(test + data1[b]);
+const printForecast = function (arr) {
+    let str = '';
+    for (let i = 0; i < arr.length; i++) {
+        str = str + `${arr[i]}ºC in ${i + 1} days ...`;
+    }
+    console.log('...' + str);
 }
 
-console.log(temp);
+printForecast(data1);
+
+
+
+
+
+
 
 // coding challenge 2
 /*
