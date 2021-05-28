@@ -1,4 +1,4 @@
-// 'use strict';
+'use strict';
 
 // function calcAge(birthYear) {
 //   const age = 2037 - birthYear;
@@ -31,15 +31,100 @@
 // //console.log(age);
 // // printAge()
 
-console.log(hello);
+// console.log(hello);
 
-morning();
+// morning();
 
-var hello = "Have a good day";
+// var hello = "Have a good day";
 
-console.log(hello);
-console.log(hello);
+// console.log(hello);
+// console.log(hello);
 
-function morning() {
-  console.log("Hello good morning");
+// function morning() {
+//   console.log("Hello good morning");
+// }
+
+
+// Hoisting
+// console.log(me);
+// console.log(job);
+// console.log(year);
+
+
+
+var me = 'Jonas';
+var job = 'teacher';
+const year = 1991;
+
+// functions 
+console.log(addDecl(2,3));
+//console.log(addExpr(2,3));
+console.log(addArrow);
+//console.log(addArrow(2,3));
+
+function addDecl(a,b) {
+  return a + b;
 }
+
+const addExpr = function(a,b) {
+  return a + b;
+}
+
+var addArrow = (a,b) => a +b;
+
+// Example
+if(!numProducts) deleteShoppingCart();
+
+var numProducts = 10;
+
+function deleteShoppingCart() {
+    console.log('All products deleted');
+}
+
+var x = 1;
+let y = 2;
+const z = 3;
+
+console.log(x === window.x);
+console.log(x === window.y);
+console.log(x === window.z);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
