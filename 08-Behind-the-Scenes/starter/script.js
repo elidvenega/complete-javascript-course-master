@@ -109,34 +109,46 @@
 
 // calcAgeArrow(1998);
 
+// const jonas = {
+//   year: 1991,
+//   calcAge: function () {
+//     console.log(2037 - this.year);
+
+//   }
+// }
+
+// jonas.calcAge();
+
+
+// const matilda = {
+//   year: 2017,
+
+// };
+// // method borrowing
+// matilda.calcAge = jonas.calcAge;
+// matilda.calcAge();
+
+// const f = jonas.calcAge;
+// f();
+
+// Regular functions vs arrow functions
 const jonas = {
   year: 1991,
   calcAge: function () {
+    console.log(this);
     console.log(2037 - this.year);
 
-  }
+
+    const isMillenial = function() {
+      console.log(this.year >= 1981 && this.year <= 1996)
+    }
+
+  },
+  greet: () => console.log(`Hey ${this.firstName}`)
 }
 
+jonas.greet();
 jonas.calcAge();
-
-
-const matilda = {
-  year: 2017,
-
-};
-// method borrowing
-matilda.calcAge = jonas.calcAge;
-matilda.calcAge();
-
-const f = jonas.calcAge;
-f();
-
-
-
-
-
-
-
 
 
 
