@@ -7,10 +7,6 @@ const restaurant = {
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
 
-  order: function (starterIndex, mainIndex) {
-    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]]
-  },
-
   openingHours: {
     thu: {
       open: 12,
@@ -25,49 +21,97 @@ const restaurant = {
       close: 24,
     },
   },
+
+  order: function (starterIndex, mainIndex) {
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]]
+  },
+
+  orderDelivery: function ({
+    starterIndex = 1,
+    mainIndex = 0,
+    time = '20:00',
+    address
+  }) {
+    console.log(`Order received ${this.starterMenu[starterIndex]} and 
+      ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`);
+  },
 };
+
+// Spread Operators
+const arr = [7, 8, 9];
+
+const newArr = [1, 2, ...arr];
+console.log(newArr);
+
+const newMenu = [...restaurant.mainMenu, 'Gnocci'];
+console.log(newMenu);
+
+// Copy array
+const mainMenuCopy = [...restaurant.mainMenu];
+const starterMenuCopy = [...restaurant.starterMenu];
+
+// Join 2 arrays
+const menu = [...restaurant.mainMenu,...restaurant.starterMenu];
+console.log(menu);
+
+// Spread operators work on Iterables:arrays, maps, sets, NOT Objects
+
+
+
+
 
 // Destructuring Objects
-const {
-  name,
-  openingHours,
-  categories
-} = restaurant;
-console.log(name, openingHours, categories);
+// restaurant.orderDelivery({
+//   time: '22:30',
+//   address: 'Via del Sole, 21',
+//   mainIndex: 2,
+//   starterIndex: 2
+// });
 
-const {
-  name: restaurantName,
-  openingHours: hours,
-  categories: tags
-} = restaurant;
-console.log(restaurantName, hours, tags);
+// restaurant.orderDelivery({
+//   address: 'Via del Sole, 21',
+//   starterIndex: 1
+// })
 
-const {
-  menu = [], starterMenu: starters = [0]
-} = restaurant;
-console.log(menu, starters);
+// const {
+//   name,
+//   openingHours,
+//   categories
+// } = restaurant;
+// console.log(name, openingHours, categories);
 
-// Mutating variables
-let a = 111;
-let b = 999;
-const obj = {
-  a: 23,
-  b: 7,
-  c: 14
-};
+// const {
+//   name: restaurantName,
+//   openingHours: hours,
+//   categories: tags
+// } = restaurant;
+// console.log(restaurantName, hours, tags);
 
-({
-  a,
-  b
-} = obj);
-console.log(a, b);
+// const {
+//   menu = [], starterMenu: starters = [0]
+// } = restaurant;
+// console.log(menu, starters);
 
-// nested objects
-const {
-  fri: {open: o, close: c},
-} = openingHours;
-console.log(o,c);
+// // Mutating variables
+// let a = 111;
+// let b = 999;
+// const obj = {
+//   a: 23,
+//   b: 7,
+//   c: 14
+// };
 
+// ({
+//   a,
+//   b
+// } = obj);
+// console.log(a, b);
+
+// // nested objects
+// const {
+//   fri: {open: o, close: c},
+// } = openingHours;
+// console.log(o,c);
 
 
 // // Array destructuring
