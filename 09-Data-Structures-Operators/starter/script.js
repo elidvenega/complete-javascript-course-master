@@ -41,18 +41,42 @@ const restaurant = {
     , ${ing2} and ${ing3}`)
   },
 
-  orderPizza: function(mainIngredient, ...otherIngredients) {
-          console.log(mainIngredient);
-          console.log(otherIngredients);
+  orderPizza: function (mainIngredient, ...otherIngredients) {
+    console.log(mainIngredient);
+    console.log(otherIngredients);
   }
 };
 
-// 1) Destructuring
+/*Short circuiting (&& ||)*/
+console.log('----OR----');
+console.log(3 || 'Jonas');
+console.log('' || 'Jonas');
+console.log(true || 0);
+console.log(undefined || null);
+
+restaurant.numGuests = 23;
+const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+console.log(guests1);
+
+const guests2 = restaurant.numGuests || 10
+console.log(guests2);
+
+console.log('----AND----');
+console.log(0 && 'Jonas');
+console.log('x' && 'Hello');
+
+if (restaurant.order) {
+  restaurant.orderPizza('mushrooms', 'spinach');
+}
+
+restaurant.orderPizza && restaurant.orderPizza
+('mushrooms','spinach');
+
 
 /*Rest Parameters */
 // Unpacks an array
 // SPREAD, because RIGHT side of =
-const arr = [1, 2, ...[3, 4]];
+/*const arr = [1, 2, ...[3, 4]];
 
 // REST, because on LEFT side of =
 const [a, b, ...others] = [1, 2, 3, 4, 5];
@@ -86,7 +110,7 @@ const x = [23,5,7];
 add(...x);
 
 restaurant.orderPizza('mushrooms', 'onion', 'olives','spinach');
-restaurant.orderPizza('mushrooms', 'onion');
+restaurant.orderPizza('mushrooms', 'onion');*/
 // Spread Operators
 // const arr = [7, 8, 9];
 
