@@ -49,12 +49,12 @@ const restaurant = {
 
 // NUllish coalescing operator
 
-const guests = restaurant.numGuests || 10;
-console.log(guests);
+// const guests = restaurant.numGuests || 10;
+// console.log(guests);
 
-// Nullish: null and undefined (NOT 0 or '')
-const guestCorrect = restaurant.numGuests ?? 10;
-console.log(guestCorrect);
+// // Nullish: null and undefined (NOT 0 or '')
+// const guestCorrect = restaurant.numGuests ?? 10;
+// console.log(guestCorrect);
 
 /*Short circuiting (&& ||)*/
 // console.log('----OR----');
