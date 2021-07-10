@@ -1,32 +1,36 @@
 'use strict';
 
+const weekdays = ['mon', 'tues', 'wed', 'thur', 'fri', 'sat', 'sun'];
+const openingHours = {
+  [weekdays[3]]: {
+    open: 12,
+    close: 22,
+  },
+  [weekdays[4]]: {
+    open: 11,
+    close: 23,
+  },
+  [`day-${2+4}`]: {
+    open: 0, // Open 24 hours
+    close: '24hrs',
+  }
+
+};
+
 const restaurant = {
   name: 'Classico Italiano',
   location: 'Via Angelo Tavanti 23, Firenze, Italy',
   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+  // ES6 enhanced object literals
+  openingHours,
 
-  openingHours: {
-    thu: {
-      open: 12,
-      close: 22,
-    },
-    fri: {
-      open: 11,
-      close: 23,
-    },
-    sat: {
-      open: 0, // Open 24 hours
-      close: 24,
-    },
-  },
-
-  order: function (starterIndex, mainIndex) {
+  order(starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]]
   },
 
-  orderDelivery: function ({
+  orderDelivery({
     starterIndex = 1,
     mainIndex = 0,
     time = '20:00',
@@ -36,16 +40,23 @@ const restaurant = {
       ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`);
   },
 
-  orderPasta: function (img1, ing2, ing3) {
+  orderPasta(img1, ing2, ing3) {
     console.log(`Here is your delicious pasta with  ${img1}
     , ${ing2} and ${ing3}`)
   },
 
-  orderPizza: function (mainIngredient, ...otherIngredients) {
+  orderPizza(mainIngredient, ...otherIngredients) {
     console.log(mainIngredient);
     console.log(otherIngredients);
   }
 };
+
+/*  for of looping arrays */
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+//for (const item of menu) console.log(item);
+for (const [x, y] of menu.entries())
+  console.log(`${x + 1}: ${y}`);
+
 
 // NUllish coalescing operator
 
