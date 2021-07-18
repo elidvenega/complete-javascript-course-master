@@ -51,25 +51,36 @@ const restaurant = {
   }
 };
 
-// Optional chaining lesson
-if (restaurant.openingHours && restaurant.openingHours.mon)
-  console.log(restaurant.openingHours.mon.open);
+/*Looking Objects: Object Keys and Value entries */
 
-// With optional chaining
-console.log(restaurant.openingHours.mon?.open);
-console.log(restaurant.openingHours?.mon?.open);
+const properties = Object.keys(openingHours);
+console.log(properties);
 
-// Example
-const days = ['mon', 'tues', 'wed', 'thur', 'fri', 'sat', 'sun'];
+console.log(`We are open on ${properties.length} days`);
 
-for (const day of days) {
-  const open = restaurant.openingHours[day]?.open ?? 'closed';
-  console.log(`On ${day}, we open at ${open}`);
+for (const day of Object.keys(openingHours)) {
+  console.log(day);
 }
 
-// Methods
-console.log(restaurant.order ?.(0, 1) ?? 'Method does not exist');
-console.log(restaurant.orderRisotto ?.(0, 1) ?? 'Method does not exist');
+// // Optional chaining lesson
+// if (restaurant.openingHours && restaurant.openingHours.mon)
+//   console.log(restaurant.openingHours.mon.open);
+
+// // With optional chaining
+// console.log(restaurant.openingHours.mon?.open);
+// console.log(restaurant.openingHours?.mon?.open);
+
+// // Example
+// const days = ['mon', 'tues', 'wed', 'thur', 'fri', 'sat', 'sun'];
+
+// for (const day of days) {
+//   const open = restaurant.openingHours[day]?.open ?? 'closed';
+//   console.log(`On ${day}, we open at ${open}`);
+// }
+
+// // Methods
+// console.log(restaurant.order ?.(0, 1) ?? 'Method does not exist');
+// console.log(restaurant.orderRisotto ?.(0, 1) ?? 'Method does not exist');
 
 
 
