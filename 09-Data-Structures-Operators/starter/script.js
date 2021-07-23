@@ -10,7 +10,7 @@ const openingHours = {
     open: 11,
     close: 23,
   },
-  [`day-${2+4}`]: {
+  [weekdays[5]]: {
     open: 0, // Open 24 hours
     close: '24hrs',
   }
@@ -52,15 +52,17 @@ const restaurant = {
 };
 
 /*Looking Objects: Object Keys and Value entries */
-
+//Property Names
 const properties = Object.keys(openingHours);
 console.log(properties);
 
-console.log(`We are open on ${properties.length} days`);
+let openStr = `We are open on ${properties.length} days:`;
 
-for (const day of Object.keys(openingHours)) {
-  console.log(day);
+for (const day of properties) {
+  openStr +=  `${day},`;
 }
+
+console.log(openStr);
 
 // // Optional chaining lesson
 // if (restaurant.openingHours && restaurant.openingHours.mon)
