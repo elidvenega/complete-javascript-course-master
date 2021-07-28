@@ -22,6 +22,61 @@ TEST DATA FOR 6: Use players 'Davies', 'Muller', 'Lewandowski' and 'Kimmich'. Th
 GOOD LUCK 😀
 */
 
+
+
+// Challenge 1
+// const [players1, players2] = game.players;
+// console.log(players1, players2);
+
+// Challenge 2
+// const [gk, ...fieldPlayers] = players1;
+// console.log(gk, fieldPlayers);
+
+// // Challenge 3
+// const [allPlayers] = [...players1, ...players2];
+// console.log(allPlayers);
+
+// // CHallenge 4
+// // const [players1Final] = game.players;
+// // players1Final.push('Thiago', 'Coutinho', 'Perisic');
+// // console.log(players1Final);
+// // Jonas answer
+// const players1Final = [...players1, 'Thiago', 'Coutinho', 'Perisicic'];
+
+// console.log(players1Final);
+
+// // challenge 5
+// // let team1 = game.odds.team1;
+// // console.log(team1);
+// // let draw = game.odds.x;
+// // console.log(draw);
+// // let team2 = game.odds.team2;
+// // console.log(team2); 
+
+// const {
+//     odds: {
+//         team1,
+//         x: draw,
+//         team2
+//     }
+// } = game;
+// console.log(team1, draw, team2);
+
+// // challenge 6
+// const printGoals = (...players) => {
+//     console.log(players);
+//     console.log(`${players.length} goals were scored`);
+
+// }
+
+// // printGoals('Davies','Muller','Lewandowski','kimmich');
+// // printGoals('Davies','Muller');
+// printGoals(...game.scored);
+
+// // challenge 7
+// team1 < team2 && console.log('Team 1 is more likely to win');
+
+
 // Coding Challenge #2
 
 /* 
@@ -82,7 +137,7 @@ const game = {
         ],
     ],
     score: '4:0',
-    scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
+    scored: ['Goal 1: Lewandowski', 'Goal 2: Gnarby', 'Goal 3: Lewandowski', 'Goal 4: Hummels'],
     date: 'Nov 9th, 2037',
     odds: {
         team1: 1.33,
@@ -93,70 +148,23 @@ const game = {
 
 // Challenge 2
 
+// 1. Loop over the game.scored array and print each player name to the console, along with the
+//  goal number (Example: "Goal 1: Lewandowski")
 
+// let goals = ['Goal 1:','Goal 2:','Goal 3:','Goal 4:']
+let games = [...game.scored]
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Challenge 1
-const [players1, players2] = game.players;
-console.log(players1, players2);
-
-// Challenge 2
-const [gk, ...fieldPlayers] = players1;
-console.log(gk, fieldPlayers);
-
-// Challenge 3
-const [allPlayers] = [...players1, ...players2];
-console.log(allPlayers);
-
-// CHallenge 4
-// const [players1Final] = game.players;
-// players1Final.push('Thiago', 'Coutinho', 'Perisic');
-// console.log(players1Final);
-// Jonas answer
-const players1Final = [...players1, 'Thiago', 'Coutinho', 'Perisicic'];
-
-console.log(players1Final);
-
-// challenge 5
-// let team1 = game.odds.team1;
-// console.log(team1);
-// let draw = game.odds.x;
-// console.log(draw);
-// let team2 = game.odds.team2;
-// console.log(team2); 
-
-const {
-    odds: {
-        team1,
-        x: draw,
-        team2
-    }
-} = game;
-console.log(team1, draw, team2);
-
-// challenge 6
-const printGoals = (...players) => {
-    console.log(players);
-    console.log(`${players.length} goals were scored`);
-
+for(const scores of games) {
+    console.log(scores);
 }
 
-// printGoals('Davies','Muller','Lewandowski','kimmich');
-// printGoals('Davies','Muller');
-printGoals(...game.scored);
 
-// challenge 7
-team1 < team2 && console.log('Team 1 is more likely to win');
+
+
+
+
+
+
+
+
+
