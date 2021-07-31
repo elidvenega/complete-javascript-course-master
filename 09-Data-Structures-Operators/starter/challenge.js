@@ -137,7 +137,8 @@ const game = {
         ],
     ],
     score: '4:0',
-    scored: ['Goal 1: Lewandowski', 'Goal 2: Gnarby', 'Goal 3: Lewandowski', 'Goal 4: Hummels'],
+    // scored: ['Goal 1: Lewandowski', 'Goal 2: Gnarby', 'Goal 3: Lewandowski', 'Goal 4: Hummels'],
+    scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
     date: 'Nov 9th, 2037',
     odds: {
         team1: 1.33,
@@ -153,18 +154,12 @@ const game = {
 
 // let goals = ['Goal 1:','Goal 2:','Goal 3:','Goal 4:']
 let games = [...game.scored]
+let goal = "Goal"
 
-for(const scores of games) {
-    console.log(scores);
+// for (const scores of games) {
+//     console.log(scores);
+// }
+
+for (const [i, el] of games.entries()) {
+    console.log(`${ i + 1}: ${el}`);
 }
-
-
-
-
-
-
-
-
-
-
-
