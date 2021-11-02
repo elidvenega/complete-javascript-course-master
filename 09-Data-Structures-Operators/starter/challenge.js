@@ -163,3 +163,6 @@ let goal = "Goal"
 for (const [i, el] of games.entries()) {
     console.log(`${ i + 1}: ${el}`);
 }
+
+
+

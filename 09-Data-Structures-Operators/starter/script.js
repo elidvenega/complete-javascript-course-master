@@ -308,3 +308,31 @@ restaurant.orderPizza('mushrooms', 'onion');*/
 // // Default Values
 // const [p = 1, q = 1, r = 1] = [8];
 // console.log(p, q, r);
+
+// Set and Map
+const orderSet = new Set([
+  'Pasta',
+  'Pizza',
+  'Pizza',
+  'Risotto',
+  'Pasta',
+  'Pizza'
+]);
+
+console.log(orderSet);
+console.log(new Set('Jonas'));
+
+console.log(orderSet.size);
+console.log(orderSet.has('Pizza'));
+console.log(orderSet.has('Bread'));
+orderSet.add('Garlic Bread');
+orderSet.add('Butter Bread');
+orderSet.delete('Risotto');
+//orderSet.clear();
+console.log();
+
+
+
+
+
+
