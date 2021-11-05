@@ -74,7 +74,7 @@ const entries = Object.entries(openingHours);
 
 // [key,value]
 
-for(constaaaaaaaaaaaaa [key, {open,close}] of entries) {
+for(const [key, {open,close}] of entries) {
   console.log(`On ${key} we open at ${open} and close at ${close}`);
 }
 
@@ -331,8 +331,13 @@ orderSet.delete('Risotto');
 //orderSet.clear();
 console.log();
 
+for(const order of orderSet) console.log(order);
 
-
-
-
-
+// Example
+const staff = ['waiter','chef','waiter','manager','chef','waiter'];
+const staffUnique = [...new Set(staff)];
+console.log(staffUnique);(
+console.log(
+  new Set(['waiter','chef','waiter','manager',
+  'chef','waiter']).size
+  );
