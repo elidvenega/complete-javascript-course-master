@@ -336,7 +336,7 @@ for(const order of orderSet) console.log(order);
 // Example
 const staff = ['waiter','chef','waiter','manager','chef','waiter'];
 const staffUnique = [...new Set(staff)];
-console.log(staffUnique);(
+console.log(staffUnique);
 console.log(
   new Set(['waiter','chef','waiter','manager',
   'chef','waiter']).size
