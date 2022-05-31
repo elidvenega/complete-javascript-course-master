@@ -13,8 +13,7 @@ const openingHours = {
   [weekdays[5]]: {
     open: 0, // Open 24 hours
     close: '24hrs',
-  }
-
+  },
 };
 
 const restaurant = {
@@ -27,28 +26,23 @@ const restaurant = {
   openingHours,
 
   order(starterIndex, mainIndex) {
-    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]]
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
 
-  orderDelivery({
-    starterIndex = 1,
-    mainIndex = 0,
-    time = '20:00',
-    address
-  }) {
+  orderDelivery({ starterIndex = 1, mainIndex = 0, time = '20:00', address }) {
     console.log(`Order received ${this.starterMenu[starterIndex]} and 
       ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`);
   },
 
   orderPasta(img1, ing2, ing3) {
     console.log(`Here is your delicious pasta with  ${img1}
-    , ${ing2} and ${ing3}`)
+    , ${ing2} and ${ing3}`);
   },
 
   orderPizza(mainIngredient, ...otherIngredients) {
     console.log(mainIngredient);
     console.log(otherIngredients);
-  }
+  },
 };
 
 /*Looking Objects: Object Keys and Value entries */
@@ -59,7 +53,7 @@ console.log(properties);
 let openStr = `We are open on ${properties.length} days:`;
 
 for (const day of properties) {
-  openStr +=  `${day},`;
+  openStr += `${day},`;
 }
 
 console.log(openStr);
@@ -74,7 +68,7 @@ const entries = Object.entries(openingHours);
 
 // [key,value]
 
-for(const [key, {open,close}] of entries) {
+for (const [key, { open, close }] of entries) {
   console.log(`On ${key} we open at ${open} and close at ${close}`);
 }
 
@@ -98,14 +92,11 @@ for(const [key, {open,close}] of entries) {
 // console.log(restaurant.order ?.(0, 1) ?? 'Method does not exist');
 // console.log(restaurant.orderRisotto ?.(0, 1) ?? 'Method does not exist');
 
-
-
 /*  for of looping arrays */
 // const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 // //for (const item of menu) console.log(item);
 // for (const [x, y] of menu.entries())
 //   console.log(`${x + 1}: ${y}`);
-
 
 // NUllish coalescing operator
 
@@ -140,7 +131,6 @@ for(const [key, {open,close}] of entries) {
 
 // restaurant.orderPizza && restaurant.orderPizza
 // ('mushrooms','spinach');
-
 
 /*Rest Parameters */
 // Unpacks an array
@@ -218,7 +208,6 @@ restaurant.orderPizza('mushrooms', 'onion');*/
 // console.log(restaurantCopy.name);
 // console.log(restaurant.name);
 
-
 // Destructuring Objects
 // restaurant.orderDelivery({
 //   time: '22:30',
@@ -272,7 +261,6 @@ restaurant.orderPizza('mushrooms', 'onion');*/
 // } = openingHours;
 // console.log(o,c);
 
-
 // // Array destructuring
 // const arr = [2, 3, 4];
 // // const a = arr[0];
@@ -316,7 +304,7 @@ const orderSet = new Set([
   'Pizza',
   'Risotto',
   'Pasta',
-  'Pizza'
+  'Pizza',
 ]);
 
 console.log(orderSet);
@@ -331,13 +319,83 @@ orderSet.delete('Risotto');
 //orderSet.clear();
 console.log();
 
-for(const order of orderSet) console.log(order);
+for (const order of orderSet) console.log(order);
 
 // Example
-const staff = ['waiter','chef','waiter','manager','chef','waiter'];
+const staff = ['waiter', 'chef', 'waiter', 'manager', 'chef', 'waiter'];
 const staffUnique = [...new Set(staff)];
 console.log(staffUnique);
 console.log(
-  new Set(['waiter','chef','waiter','manager',
-  'chef','waiter']).size
-  );
+  new Set(['waiter', 'chef', 'waiter', 'manager', 'chef', 'waiter']).size
+);
+
+// Maps
+const rest = new Map();
+rest.set('name', 'Classico Italiano');
+rest.set(1, 'Firenze, Italy');
+rest.set(2, 'Firenze, Italy');
+
+console.log(rest.set(2, 'Lisbon, Portugal'));
+
+rest
+  .set('categories', ['Italian', 'Pizzeria', 'Vegeterian', 'Organic'])
+  .set('open', 11)
+  .set('close', 23)
+  .set(true, 'We are open :D')
+  .set(false, 'We are closed :(');
+
+console.log(rest.get('name'));
+console.log(rest.get(true));
+
+const time = 21;
+console.log(rest.get(time > rest.get('open') && time < rest.get('close')));
+
+console.log(rest.get('categories'));
+rest.delete(2);
+
+const question = new Map([
+  ['question', 'What is the best programming language in the world?'],
+  [1, 'C'],
+  [2, 'Java'],
+  [3, 'JS'],
+  ['correct answer', 3],
+  [true, 'Correct'],
+  [false, 'wrong'],
+]);
+
+console.log(question);
+
+// Convert objects to map
+console.log(Object.entries(openingHours));
+const hoursMap = new Map(Object.entries(openingHours));
+
+console.log(hoursMap);
+
+// Quiz app
+console.log(question.get('question'));
+
+for (const [key, value] of question) {
+    if(typeof key === 'number') console.log(`Answer ${key}: ${value}`); 
+}
+
+//const answer = Number(prompt('Your answer'));
+const answer = 3;
+console.log(answer);
+
+console.log(question.get(question.get('correct answer') === answer));
+
+// Convert map to array
+console.log([...question]);
+console.log(question.entries());
+console.log([...question.keys()]);
+console.log([...question.values()]);
+
+
+
+
+
+
+
+
+
+

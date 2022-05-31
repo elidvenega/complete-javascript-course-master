@@ -1,0 +1,16 @@
+Compilation:Entire code is converted into machine code at once, and written to a binary file 
+that can be executed by a computer.
+
+Interpretation: Interpret runs, through the source code and executes it line by line.
+
+Just-in-time(JIT)compilation: Entire code is converted into machine code at once,
+then executed immediately.
+
+this reference the object that owns the function
+arrow function does not have this
+
+never use an arrow function as a method
+
+Primitives go into the call stack
+
+Reference types go into the memory heap

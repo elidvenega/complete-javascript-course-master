@@ -1,0 +1,86 @@
+In JS every value is either a object or a primitive
+JS is first in and first out
+1.object  
+2.primitive
+
+There are 7 primitive data types: string, number, bigint, boolean, undefined, 
+symbol, and null
+
+Everything thats not a primitive is a reference type
+
+JS is executed from top to bottom
+
+value = is a piece of data
+
+Dynamic Typing we can easily change the type of a value
+
+use const by default
+
+Type conversion and coercion
+conversion manually type one type to another
+
+coercion when js automatically changes types behind the scenes
+Coercion is to convert one type to another with or without your awareness. 
+Coercion happens when operands are of different types:
+Coercion does boolean,number,string
+
+NaN  a invalid number
+
+6 falsy values: 0, '', undefined, null, NaN, false
+
+Boolean logic
+AND OR NOT
+
+Expression is a piece of code that produces a value
+Statement is a bigger piece of code that does not produce a value on itself
+
+Terniary operator does not replace else if statements
+
+function declaration can be call before declared and can't do the same with function 
+expression
+
+Note: Preference function declaration vs expression
+
+Arrays[] for order data and objects{} for unordered data
+
+4 Steps to solve any problem
+1.Make sure you 100% understand the problem. ask the right questions
+to get a clear picture of the problem.
+2.Divide and conquer: Break a big problem into smaller sub-problems
+3.Don't be afraid to do as much research as you have to
+4.For bigger problems, write pseudo-code
+before writing the actual code.
+
+DOM is a complete represantation of the document
+DOM is part of the WEB API'S
+
+callstack and memory heap create the js engine
+
+Whats inside the execution context
+1.Variable enviroment
+2.Scope chain
+3.this keyword
+
+Spread operators ... is similiar to destructuring it takes elements from 
+arrays doesn't create new elements
+
+Spread operators work on Iterables:arrays, maps, sets, NOT Objects
+
+boolean operators you can use any data type and and return any data type
+short-circuiting: if the first value is true then it will return
+
+In E6 2 more data structures were added set's and map's it had just array
+and object's
+set is a collection of unique values cannot be duplicated
+set's has no index
+set's are iterables so they can be loop
+
+set's are not meant to replace arrays
+store values in order
+
+instance informally to mean an object created using a 
+particular constructor function
+
+
+
+
