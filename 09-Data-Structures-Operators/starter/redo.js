@@ -45,6 +45,23 @@ const restaurant = {
   },
 };
 
+// Use ANY data type, return ANY data type, short-circuiting
+console.log(3 || 'Jonas'); //3
+console.log('' || 'Jonas'); //jonas
+console.log(true || 0); //true
+console.log(undefined || null); //null
+
+restaurant.numGuests = 23;
+const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+console.log(guests1);
+
+const guests2 = restaurant.numGuests || 10;
+console.log(guests2);
+
+
+/* 
+//////////////////////////////////////
+// REst Pattern and Parameters
 // 1) Destructuring
 
 // Rest pack elements into an Array
@@ -79,7 +96,7 @@ const x = [23, 5, 7];
 add(...x);
 
 restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
-restaurant.orderPizza('mushrooms');
+restaurant.orderPizza('mushrooms'); */
 /* 
 ////////////////////////////////////////
 // The Spread Operator (...)
