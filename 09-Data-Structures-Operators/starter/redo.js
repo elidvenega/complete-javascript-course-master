@@ -44,7 +44,7 @@ const restaurant = {
     console.log(otherIngredients);
   },
 };
-
+console.log('------- OR ---------');
 // Use ANY data type, return ANY data type, short-circuiting
 console.log(3 || 'Jonas'); //3
 console.log('' || 'Jonas'); //jonas
@@ -58,6 +58,19 @@ console.log(guests1);
 const guests2 = restaurant.numGuests || 10;
 console.log(guests2);
 
+console.log('-------- AND --------');
+console.log(0 && 'Jonas');
+console.log(7 && 'Jonas');
+
+console.log('Hello' && 23 && null && 'jonas');
+
+// Practical example
+if(restaurant.orderPizza) {
+  restaurant.orderPizza('mushrooms', 'spinach')
+}
+
+restaurant.orderPizza && restaurant.orderPizza
+('mushrooms', 'spinach');
 
 /* 
 //////////////////////////////////////
