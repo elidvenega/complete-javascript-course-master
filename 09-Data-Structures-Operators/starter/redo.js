@@ -1,6 +1,6 @@
 'use strict';
 
-const weekdays = ['mon', 'tues', 'wed', 'thur', 'fri', 'sat', 'sun'];
+const weekdays = ['Mon', 'Tues', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun'];
 const hours = {
   [weekdays[3]]: {
     open: 12,
@@ -44,12 +44,92 @@ const restaurant = {
   },
 };
 
-const properties = Object.keys(hours)
+const rest = new Map();
+rest.set('name', 'Classico Italiano');
+rest.set(1, 'Firenze, Italy');
+console.log(rest.set(2, 'Lisbon, Portugal'));
+
+rest
+  .set('categories', ['Italian', 'Pizzeria', 'Vegeterian', 'Organic'])
+  .set('open', 11)
+  .set('close', 23)
+  .set(true, 'We are open :D')
+  .set(false, 'We are closed :(');
+
+console.log(rest.get('name'));
+console.log(rest.get(true));
+console.log(rest.get(1));
+
+const time = 24;
+console.log(rest.get(time > rest.get('open') && time < rest.get('close')));
+
+console.log(rest.has('categories'));
+rest.delete(2);
+//rest.clear();
+const arr = [1, 2];
+rest.set(arr, 'test');
+rest.set(document.querySelector('h1'), 'Heading');
+console.log(rest);
+console.log(rest.size);
+
+/* 
+/////////////////////////////////////////////////////
+// Sets
+const orderSet = new Set([
+  'Pasta',
+  'Pizza',
+  'Pizza',
+  'Risotto',
+  'Pasta',
+  'Pizza',
+]);
+
+console.log(orderSet);
+
+console.log(new Set('Jonas'));
+
+console.log(orderSet.size);
+console.log(orderSet.has('Pizza'));
+console.log(orderSet.has('Bread'));
+orderSet.add('Garlic Bread');
+orderSet.add('Garlic Bread');
+orderSet.delete('Risotto');
+//orderSet.clear();
+console.log(orderSet);
+
+for(const order of orderSet) console.log(order);
+
+// Example
+const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
+const staffUnique = [...new Set(staff)];
+console.log(staffUnique); */
+/* 
+///////////////////////////////////////////////////////////////////////
+//KEYS ,VALUES , ENTRIES, 
+// Property NAMES
+const properties = Object.keys(hours);
 console.log(properties);
 
-for(const day of Object.keys(hours)) {
-  console.log(day);
+let openStr = `We are open on ${properties.length} days`;
+
+for (const day of Object.keys(hours)) {
+  openStr += ` ${day},`;
 }
+
+console.log(openStr);
+
+// Property VALUES
+const values = Object.values(hours);
+console.log(values);
+
+// Entire object
+const entries = Object.entries(hours);
+console.log(entries);
+
+// [key, value]
+for (const [key, { open, close }] of entries) {
+  console.log(`On ${key} we open at ${open} and close at ${close}`);
+} */
 
 /* 
 /////////////////////////////////////////////////////////////////
