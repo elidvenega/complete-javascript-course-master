@@ -168,13 +168,14 @@ Let's continue with our football betting app! This time, we have a map with a lo
 1. Create an array 'events' of the different game events that happened (no duplicates)
 2. After the game has finished, is was found that the yellow card from minute 64 was unfair. So remove this event from the game events log.
 3. Print the following string to the console: "An event happened, on average, every 9 minutes" (keep in mind that a game has 90 minutes)
-4. Loop over the events and log them to the console, marking whether it's in the first half or second half (after 45 min) of the game, like this:
+4. Loop over the events and log them to the console, marking whether it's in the first half or second half (after 45 min) of the game, 
++like this:
       [FIRST HALF] 17: ⚽️ GOAL
 
 GOOD LUCK 😀
 */
 
-//game plan due sate 07/02/22
+//game plan due sate 07/20/22
 /* 
 1.Rewatch map Udemy videos
 2.Study Notes
@@ -195,9 +196,21 @@ const gameEvents = new Map([
   [92, '🔶 Yellow card'],
 ]);
 
-// const result = words.filter(word => word.length > 6);
+// 1.
+const events = [...new Set(gameEvents.values())];
 
-const events = gameEvents.filter();
-// console.log(events);
-events.splice(4, 1);
-console.log(events);
+// 2.
+gameEvents.delete(64);
+
+//3.
+const time = [...gameEvents.keys()].pop();
+console.log(time);
+console.log(
+  `An event happened, on average, every ${time / gameEvents.size} minutes`
+);
+
+// 4.
+for (const [min, event] of gameEvents) {
+  const half = min <= 45 ? 'FIRST' : 'SECOND';
+  console.log(`[${half} HALF] ${min}: ${event}`);
+}

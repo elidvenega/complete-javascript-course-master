@@ -44,6 +44,9 @@ const restaurant = {
   },
 };
 
+/* 
+////////////////////////////////////////////////////////
+//Map
 const question = new Map([
   ['question', 'What is the best programming language in the world?'],
   [1, 'C'],
@@ -77,6 +80,9 @@ for (const [key, value] of question) {
 
 // Convert map to array
 console.log([...question]);
+// console.log(question.entries());
+console.log(...question.keys());
+console.log(...question.values()); */
 
 /* 
 /////////////////////////////////////////////////////
