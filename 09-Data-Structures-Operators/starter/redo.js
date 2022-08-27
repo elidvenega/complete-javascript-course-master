@@ -44,6 +44,12 @@ const restaurant = {
   },
 };
 
+const airplane = 'Tap Air Portugual';
+const plane = 'A320';
+
+console.log(plane[0]);
+console.log(plane[1]);
+console.log(plane[2]);
 /* 
 ////////////////////////////////////////////////////////
 //Map
