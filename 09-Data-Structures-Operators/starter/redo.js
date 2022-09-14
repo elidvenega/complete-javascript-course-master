@@ -44,7 +44,85 @@ const restaurant = {
   },
 };
 
-const airline = 'Tap Air Portugual';
+const airline = 'TAP Air Portugal';
+
+console.log(airline.toLowerCase());
+console.log(airline.toUpperCase());
+
+// Fix capitalize in name
+const passenger = 'jOnAS';
+const passengerLower = passenger.toLocaleLowerCase();
+const passengerCorrect =
+  passengerLower[0].toLocaleUpperCase() + passengerLower.slice(1);
+console.log(passengerLower);
+console.log(passengerCorrect);
+
+// Comparing Emails
+const email = 'hello@jonas.io';
+const loginEmail = '  Hello@Jonas.Io \n';
+
+const lowerEmail = loginEmail.toLowerCase();
+const trimmedEmail = lowerEmail.trim();
+
+console.log(trimmedEmail);
+
+const normalizedEmail = loginEmail.toLowerCase().trim();
+
+console.log(normalizedEmail);
+console.log(email === normalizedEmail);
+
+// replacing
+const priceGB = '288.79$';
+const priceUS = priceGB.replace('$', ' Dollars');
+console.log(priceUS);
+
+const announcement = 'All passengers come to boarding door 23!';
+//console.log(announcement.replace('door', 'gate'));
+
+console.log(announcement.replace(/door/g, 'gate'));
+
+// Booleans
+const plane = 'Airbus A320neo';
+console.log(plane.includes('A320'));
+console.log(plane.includes('Boeing'));
+console.log(plane.startsWith('Air'));
+
+if (plane.startsWith('Airbus') && plane.endsWith('neo')) {
+  console.log('Part of the NEW Airbus Family');
+}
+
+// Practice Exercise
+const checkBaggage = (items) => {
+  const baggage = items.toLowerCase();
+
+  if (baggage.includes('knife') || baggage.includes('gun')) {
+    console.log('You are NOT allowed on board');
+  } else {
+    console.log('Welcome aboard!');
+  }
+};
+
+checkBaggage('I have a laptop, some food and a pocket Knife');
+checkBaggage('Socks and camera');
+checkBaggage('Got some snacks and a gun for protection');
+
+// function that compares emails
+function compare(email1, email2) {
+  if (email1 === email2) {
+    console.log('Emails Match');
+  } else {
+    console.log("Emails don't match");
+  }
+}
+
+let emailOne = 'josh@gmail.com';
+let emailTwo = 'edward@gmail.com';
+
+compare(emailOne, emailTwo);
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////'
+/* String Section Part 1 */
+/* const airline = 'TAP Air Portugal';
 const plane = 'A320';
 
 console.log(plane[0]);
@@ -55,7 +133,7 @@ console.log('B737'[0]);
 console.log(airline.length);
 console.log('B737A'.length);
 
-console.log(airline.indexOf('r'));
+console.log(airline.indexOf('r'),"Index");
 console.log(airline.lastIndexOf('r'));
 console.log(airline.indexOf('portugual'));
 
@@ -76,7 +154,7 @@ const checkMiddleSeat = function (seat) {
 checkMiddleSeat('11B');
 checkMiddleSeat('23C');
 checkMiddleSeat('3E');
-
+ */
 /* 
 ////////////////////////////////////////////////////////
 //Map
