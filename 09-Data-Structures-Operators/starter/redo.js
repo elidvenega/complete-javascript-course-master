@@ -44,7 +44,59 @@ const restaurant = {
   },
 };
 
-const airline = 'TAP Air Portugal';
+// Split and join
+console.log('a+very+nice+string'.split('+'));
+console.log('Jonas Schmedtman'.split(' '));
+
+const [firstName, lastName] = 'Jonas Schmedtman'.split(' ');
+
+const newName = ['Mr', firstName, lastName.toUpperCase()].join(' ');
+console.log(newName);
+
+const capitalizeName = function (name) {
+  const names = name.split(' ');
+  const namesUpper = [];
+
+  for (const n of names) {
+    //   namesUpper.push(n[0].toUpperCase() + n.slice(1));
+    namesUpper.push(n.replace(n[0], n[0].toUpperCase()));
+  }
+  console.log(namesUpper.join(' '));
+};
+
+capitalizeName('jessica ann smith davis');
+capitalizeName('jonas schmedtmann');
+
+// Padding
+const message = 'Go to gate 23!';
+console.log(message.padStart(25, '+').padEnd(30, '+'));
+console.log(message.padStart(20, '+').padEnd(30, '+'));
+
+const maskCreditCard = number => {
+  const str = number + '';
+  const last = str.slice(-4);
+  return last.padStart(str.length, 0);
+};
+
+console.log(maskCreditCard(4734784847));
+console.log(maskCreditCard('83748374'));
+
+// Repeat
+const message2 = 'Bad Weather... All Departures Delayed... ';
+console.log(message2.repeat(5));
+
+const planesInLine = function (n) {
+  console.log(`There are ${n} planes im line ${'✈️'.repeat(n)}`);
+};
+
+planesInLine(5);
+planesInLine(3);
+planesInLine(12);
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Working with strings part 2
+
+/* const airline = 'TAP Air Portugal';
 
 console.log(airline.toLowerCase());
 console.log(airline.toUpperCase());
@@ -92,7 +144,7 @@ if (plane.startsWith('Airbus') && plane.endsWith('neo')) {
 }
 
 // Practice Exercise
-const checkBaggage = (items) => {
+const checkBaggage = items => {
   const baggage = items.toLowerCase();
 
   if (baggage.includes('knife') || baggage.includes('gun')) {
@@ -118,7 +170,7 @@ function compare(email1, email2) {
 let emailOne = 'josh@gmail.com';
 let emailTwo = 'edward@gmail.com';
 
-compare(emailOne, emailTwo);
+compare(emailOne, emailTwo); */
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////'
 /* String Section Part 1 */
