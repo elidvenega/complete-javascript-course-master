@@ -19,7 +19,7 @@ use const by default
 Type conversion and coercion
 conversion manually type one type to another
 
-coercion when js automatically changes types behind the scenes
+coercion when8 js automatically changes types behind the scenes
 Coercion is to convert one type to another with or without your awareness. 
 Coercion happens when operands are of different types:
 Coercion does boolean,number,string
