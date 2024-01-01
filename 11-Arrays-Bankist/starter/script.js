@@ -74,3 +74,14 @@ const currencies = new Map([
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
+let arr = ['a', 'b', 'c', 'd', 'e'];
+
+console.log(arr.slice(2));
+
+const ex1 = [1, 2, 3, 4];
+const ex2 = [5, 6, 7, 8];
+
+const sumArr = [...ex1, ...ex2];
+
+console.log(sumArr);
+console.log(ex1);
